@@ -1,0 +1,30 @@
+/* index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+/* Define custom font face */
+@font-face {
+  font-family: 'Brockmann';
+  src: url('../static/fonts/brockmann-medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF-UI';
+    src: url('../static/fonts/sf-ui-medium.otf') format('truetype');
+  }
+
+/* Tailwind CSS imports and configurations */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional styling or configurations */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
