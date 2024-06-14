@@ -6,7 +6,6 @@ const background = "bg-backgroundColorPrimary";
 
 const header1 = "Dicer aims to redefine";
 const header2 = "the web3 casino experience.";
-const buttonText = "Join waitlist";
 
 function Hero(props) {
     return (
@@ -24,15 +23,11 @@ function Hero(props) {
                         </video>
                         {header1}
                     </div>
-                    <div className="brockmann2 text-textColorPrimary flex ml-2">
+                    <div className="brockmann2 text-textColorPrimary flex ml-2 mb-12">
                         {header2}
                     </div>
                 </div>
-                <button className="bg-transparent flex justify-center items-center text-textColorPrimary mt-12" style={{ width: "185px", height: "40px", padding: "8px 16px", gap: "4px", borderRadius: "100px", border: "1px solid" }}>
-                    <div className="font-SFUI" style={{ fontSize: '18px', fontWeight: 600, lineHeight: '24px', textAlign: 'center' }}>
-                        {buttonText}
-                    </div>
-                </button>
+
             </div>
         </div>
     );
