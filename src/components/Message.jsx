@@ -16,7 +16,7 @@ function Message(props) {
             <img src={MessageBackgroundDeco} alt="Background Decoration" className="absolute z-10 w-full h-full"/>
 
             <div className="container max-w-screen-xl mx-auto flex flex-col justify-center items-center relative pt-64 pb-32">
-                <img src={messageImage1} alt="Message" className="w-auto h-auto pb-0 pt-16" />
+                <img src={messageImage1} alt="Message" className="w-1/3 h-1/3 pb-0 pt-16" />
                 <div className="text-textColorPrimary2 py-24 leading-tight">
                     <div className="flex brockmann5 text-textColorPrimary2 ">
                         <div className="" style={{
@@ -35,7 +35,7 @@ function Message(props) {
                         {subheader}
                     </div>
                 </div>
-                <img src={messageImage2} alt="Message" className="w-auto h-auto p-16" />
+                <img src={messageImage2} alt="Message" className="w-1/2 h-1/2 p-16" />
             </div>
         </div>
     );

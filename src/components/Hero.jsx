@@ -1,5 +1,5 @@
 import '../../static/fonts.css';
-import heroDicerLogo from '/HeroDicerLogo.gif'; // Import the image file
+import heroDicerLogo from '/HeroDicerLogo.mp4'; // Import the video file
 import heroBackground from '/HeroBackground.mp4'; // Import the video file
 
 const background = "bg-backgroundColorPrimary";
@@ -17,8 +17,11 @@ function Hero(props) {
             </video>
             <div className="container max-w-screen-xl mx-auto flex flex-col justify-center items-center relative z-10">
                 <div>
-                    <div className="brockmann2 text-textColorPrimary flex justify-start">
-                        <img src={heroDicerLogo} alt="Hero Dicer Logo" className="mr-2" style={{ width: '76px', height: '76px' }} /> {/* Adjust width and height */}
+                    <div className="brockmann2 text-textColorPrimary flex justify-start items-center">
+                        <video width="76" height="76" autoPlay loop muted className="mr-2">
+                            <source src={heroDicerLogo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                         {header1}
                     </div>
                     <div className="brockmann2 text-textColorPrimary flex ml-2">
