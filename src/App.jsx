@@ -8,7 +8,11 @@ import AnimationHero from "./components/AnimationHero.jsx";
 
 import Catchphrase from "./components/Catchphrase.jsx";
 import Poster from "./components/Poster.jsx";
+
 import Message from "./components/Message.jsx";
+import AnimationMessage from "./components/AnimationMessage.jsx";
+
+
 import Winning from "./components/Winning.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -17,12 +21,17 @@ export default function App() {
         <>
 
             <JoinButtonParent />
+
             {/* <Hero /> */}
                         <AnimationHero />
 
             <Catchphrase />
             <Poster />
-            <Message />
+
+            {/* <Message /> */}
+                        <AnimationMessage />
+
+
             <Winning />
             <Footer />
         </>

@@ -13,6 +13,8 @@ const container1Variants = {
     visible: {
         transition: {
             staggerChildren: 0.075, // Stagger the reveal of each word
+            delayChildren: 0.5, // Delay the start of this animation by 0.15 seconds
+
         },
     },
 };
@@ -22,7 +24,7 @@ const container2Variants = {
     visible: {
         transition: {
             staggerChildren: 0.075,
-            delayChildren: 0.15, // Delay the start of this animation by 0.15 seconds
+            delayChildren: 0.65, // Delay the start of this animation by 0.15 seconds
         },
     },
 };
@@ -47,7 +49,7 @@ function AnimationHero(props) {
                 muted
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 2, delay: 0.5 }} // Fade in with a delay of 1 second and duration of 1 second
+                transition={{ duration: 2, delay: 1 }} // Fade in with a delay of 1 second and duration of 1 second
                 className="absolute inset-0 object-cover w-full h-full z-0"
             >
                 <source src={heroBackground} type="video/mp4" />

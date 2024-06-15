@@ -13,7 +13,7 @@ const JoinButtonAbsolute = React.forwardRef(({ isHovered, handleMouseEnter, hand
                 <motion.button
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.1, duration: 1 }}
+                    transition={{ delay: 0.6, duration: 1 }}
                     className="bg-transparent flex justify-center items-center text-textColorPrimary backdrop-blur-xl"
                     style={{
                         width: "185px",
