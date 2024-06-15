@@ -4,6 +4,8 @@ import React from 'react';
 import JoinButtonParent from "./components/JoinButtonParent.jsx";
 
 import Hero from "./components/Hero.jsx";
+import AnimationHero from "./components/AnimationHero.jsx";
+
 import Catchphrase from "./components/Catchphrase.jsx";
 import Poster from "./components/Poster.jsx";
 import Message from "./components/Message.jsx";
@@ -15,7 +17,9 @@ export default function App() {
         <>
 
             <JoinButtonParent />
-            <Hero />
+            {/* <Hero /> */}
+                        <AnimationHero />
+
             <Catchphrase />
             <Poster />
             <Message />

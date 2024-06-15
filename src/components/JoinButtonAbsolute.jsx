@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import SubmitButton from '/JoinButtonSubmit.svg'; // Adjust the path based on your file structure
 import SubmittedDeco from '/JoinSubmittedButtonDeco.png'; // Adjust the path based on your file structure
 
@@ -9,7 +10,10 @@ const JoinButtonAbsolute = React.forwardRef(({ isHovered, handleMouseEnter, hand
     return (
         <div ref={ref} className={`absolute bottom-52 flex justify-center items-center left-0 right-0 z-50`}>
             {!buttonClicked && !submitted && (
-                <button
+                <motion.button
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.1, duration: 0.75 }}
                     className="bg-transparent flex justify-center items-center text-textColorPrimary backdrop-blur-xl"
                     style={{
                         width: "185px",
@@ -29,7 +33,7 @@ const JoinButtonAbsolute = React.forwardRef(({ isHovered, handleMouseEnter, hand
                     <div className="font-SFUI" style={{ fontSize: '18px', fontWeight: 600, lineHeight: '24px', textAlign: 'center' }}>
                         {buttonText}
                     </div>
-                </button>
+                </motion.button>
             )}
 
             {showEmailInput && !submitted && (
