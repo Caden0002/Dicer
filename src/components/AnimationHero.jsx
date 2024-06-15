@@ -1,4 +1,4 @@
-import '../../static/fonts.css';
+import React from 'react';
 import { motion } from 'framer-motion';
 import heroDicerLogo from '/HeroDicerLogo.mp4'; // Import the video file
 import heroBackground from '/HeroBackground.mp4'; // Import the video file
@@ -22,7 +22,7 @@ const container2Variants = {
     visible: {
         transition: {
             staggerChildren: 0.075,
-            delayChildren: 0.15, // Delay the start of this animation by 0.5 seconds
+            delayChildren: 0.15, // Delay the start of this animation by 0.15 seconds
         },
     },
 };
@@ -38,13 +38,21 @@ const wordVariants = {
     },
 };
 
-function HeroAnimation(props) {
+function AnimationHero(props) {
     return (
         <div className={`relative min-h-screen flex ${background}`}>
-            <video autoPlay loop muted className="absolute inset-0 object-cover w-full h-full z-0">
+            <motion.video
+                autoPlay
+                loop
+                muted
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2, delay: 0.5 }} // Fade in with a delay of 1 second and duration of 1 second
+                className="absolute inset-0 object-cover w-full h-full z-0"
+            >
                 <source src={heroBackground} type="video/mp4" />
                 Your browser does not support the video tag.
-            </video>
+            </motion.video>
             <div className="container max-w-screen-xl mx-auto flex flex-col justify-center items-center relative z-10">
                 <div className="brockmann2 text-textColorPrimary flex justify-start items-center mr-36">
                     <video width="76" height="76" autoPlay loop muted className="mr-2">
@@ -88,4 +96,4 @@ function HeroAnimation(props) {
     );
 }
 
-export default HeroAnimation;
+export default AnimationHero;
