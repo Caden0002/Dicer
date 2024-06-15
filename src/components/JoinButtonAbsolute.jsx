@@ -33,7 +33,7 @@ const JoinButtonAbsolute = React.forwardRef(({ isHovered, handleMouseEnter, hand
             )}
 
             {showEmailInput && !submitted && (
-                <div className="absolute flex items-center">
+                <div className=" relative ">
                     <input
                         type="email"
                         placeholder="john@dicer.xyz"
