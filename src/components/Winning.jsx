@@ -23,7 +23,7 @@ function Winning(props) {
     return (
         <div className={`relative flex ${background} ${screenHeight}`}>
             <video autoPlay loop muted className="absolute inset-x-0 bottom-0 w-full object-cover z-0">
-                <source src="/WinningBackgroundVideo.mp4" type="video/mp4" />
+                <source src={BackgroundVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <img src={WinningBackgroundDeco} alt="Background Decoration" className="absolute z-10 w-full h-full z-10"/>

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import '../../static/fonts.css';
 import PosterBackgroundDeco from '/PosterBackgroundDeco.svg'; // Import the background image
 
@@ -10,26 +11,23 @@ const header3 = "catalog of games.";
 const items = [
     { image: '/PosterBrooklyn.png' },
     { image: '/PosterMacao.png' },
+    { image: '/PosterMacao.png' },
     { image: '/PosterNavada.png' },
     { image: '/PosterBrooklyn.png' },
     { image: '/PosterMacao.png' },
     { image: '/PosterNavada.png' },
 ];
 
-const AnimationPosterPhrase = () => {
-    const textRef = useRef(null);
+const AnimationPoster = () => {
+    const [length, setLength] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             const viewportHeight = window.innerHeight;
             const startPosition = viewportHeight / 0.7;
-            const length = Math.max(0, Math.min(3, Math.floor((scrollPosition - startPosition) / 100)));
-
-            const word = "evergro" + "o".repeat(length) + "wing";
-            if (textRef.current) {
-                textRef.current.textContent = word;
-            }
+            const newLength = Math.max(0, Math.min(3, Math.floor((scrollPosition - startPosition) / 100)));
+            setLength(newLength);
         };
 
         // Add scroll event listener when component mounts
@@ -54,9 +52,18 @@ const AnimationPosterPhrase = () => {
                             background: '-webkit-linear-gradient(180deg, #33FF00 0%, #00FF0A 13%, #FCFF66 28%, #FF0000 43%, #FF0000 58%, #00E0FF 70%, #FF549C 87%)',
                             WebkitBackgroundClip: 'text',
                             backgroundClip: 'text',
-                            color: 'rgba(255, 255, 255, 0.4)', // Transparent white color with 50% opacity
+                            color: 'rgba(255, 255, 255, 0.4)', // Transparent white color with 40% opacity
                         }}>
-                            <div ref={textRef}>evergrow</div>
+                            evergro{Array.from({ length }, (_, index) => (
+<motion.span
+    key={index}
+    initial={{ opacity: 0}}
+    animate={{ opacity: 1}}
+    transition={{ duration: 0.25, delay: index * 0.1 }}
+>
+    o
+</motion.span>
+                            ))}wing
                         </div>
                     </div>
                     <div className="brockmann3 text-textColorPrimary2 flex justify-center">
@@ -77,4 +84,4 @@ const AnimationPosterPhrase = () => {
     );
 }
 
-export default AnimationPosterPhrase;
+export default AnimationPoster;

@@ -10,7 +10,7 @@ import Winning from "./components/Winning.jsx";
 import Footer from "./components/Footer.jsx";
 
 import AnimationHero from "./components/AnimationHero.jsx";
-import AnimationPosterPhrase from "./components/AnimationPosterPhrase.jsx";
+import AnimationPoster from "./components/AnimationPoster.jsx";
 import AnimationMessage from "./components/AnimationMessage.jsx";
 
 
@@ -25,7 +25,7 @@ export default function App() {
             <Catchphrase />
 
             {/* <Poster /> */}
-            <AnimationPosterPhrase />
+            <AnimationPoster />
 
 
             {/* <Message /> */}
