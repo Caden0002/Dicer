@@ -3,22 +3,27 @@ import { motion } from 'framer-motion';
 import '../../static/fonts.css';
 import PosterBackgroundDeco from '/PosterBackgroundDeco.svg'; // Import the background image
 
-const background = "bg-backgroundColorPrimary"; // Replace with the correct Tailwind class for your primary background color
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/splide.min.css";
+
+import Brooklyn from '/PosterBrooklyn.png';
+import Macao from '/PosterMacao.png';
+import Navada from '/PosterNavada.png';
+
+const background = "bg-backgroundColorPrimary";
 
 const header1 = "An";
 const header3 = "catalog of games.";
 
-const items = [
-    { image: '/PosterBrooklyn.png' },
-    { image: '/PosterMacao.png' },
-    { image: '/PosterMacao.png' },
-    { image: '/PosterNavada.png' },
-    { image: '/PosterBrooklyn.png' },
-    { image: '/PosterMacao.png' },
-    { image: '/PosterNavada.png' },
-];
+const imageStyle = {
+    width: '447px',
+    height: '664px',
+    borderRadius: '20px',
+    border: '1px solid #FFFFFF33',
+};
 
-const AnimationPoster = () => {
+function AnimationPoster(props) {
     const [length, setLength] = useState(0);
 
     useEffect(() => {
@@ -30,14 +35,12 @@ const AnimationPoster = () => {
             setLength(newLength);
         };
 
-        // Add scroll event listener when component mounts
         window.addEventListener('scroll', handleScroll);
 
-        // Remove scroll event listener when component unmounts
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []); // Empty dependency array ensures this effect runs only on mount
+    }, []);
 
     return (
         <div className={`relative flex h-full ${background}`}>
@@ -52,17 +55,17 @@ const AnimationPoster = () => {
                             background: '-webkit-linear-gradient(180deg, #33FF00 0%, #00FF0A 13%, #FCFF66 28%, #FF0000 43%, #FF0000 58%, #00E0FF 70%, #FF549C 87%)',
                             WebkitBackgroundClip: 'text',
                             backgroundClip: 'text',
-                            color: 'rgba(255, 255, 255, 0.4)', // Transparent white color with 40% opacity
+                            color: 'rgba(255, 255, 255, 0.4)',
                         }}>
                             evergro{Array.from({ length }, (_, index) => (
-<motion.span
-    key={index}
-    initial={{ opacity: 0}}
-    animate={{ opacity: 1}}
-    transition={{ duration: 0.25, delay: index * 0.1 }}
->
-    o
-</motion.span>
+                                <motion.span
+                                    key={index}
+                                    initial={{ opacity: 0}}
+                                    animate={{ opacity: 1}}
+                                    transition={{ duration: 0.25, delay: index * 0.1 }}
+                                >
+                                    o
+                                </motion.span>
                             ))}wing
                         </div>
                     </div>
@@ -70,15 +73,40 @@ const AnimationPoster = () => {
                         {header3}
                     </div>
                 </div>
-                <div className="overflow-x-auto scrollbar-hide">
-                    <div className="flex space-x-2 items-center" style={{ marginLeft: '-200px' }}>
-                        {items.map((item, index) => (
-                            <div className="flex-none border-white rounded-3xl overflow-hidden" key={index} style={{ border: '1px solid #FFFFFF33' }}>
-                                <img src={item.image} alt={`Poster ${index}`} style={{ width: '447px', height: '664px' }} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                <Splide
+                    options={{
+                        type: "loop",
+                        perPage: 3,
+                        autoScroll: {
+                            pauseOnHover: false,
+                            pauseOnFocus: false,
+                            rewind: false,
+                            speed: 1
+                        },
+                        arrows: false,
+                        pagination: false,
+                    }}
+                    extensions={{ AutoScroll }}
+                >
+                    <SplideSlide>
+                        <img src={Brooklyn} alt="Poster Brooklyn" style={imageStyle} />
+                    </SplideSlide>
+                    <SplideSlide>
+                        <img src={Macao} alt="Poster Macao" style={imageStyle} />
+                    </SplideSlide>
+                    <SplideSlide>
+                        <img src={Navada} alt="Poster Navada" style={imageStyle} />
+                    </SplideSlide>
+                    <SplideSlide>
+                        <img src={Brooklyn} alt="Poster Brooklyn" style={imageStyle} />
+                    </SplideSlide>
+                    <SplideSlide>
+                        <img src={Macao} alt="Poster Macao" style={imageStyle} />
+                    </SplideSlide>
+                    <SplideSlide>
+                        <img src={Navada} alt="Poster Navada" style={imageStyle} />
+                    </SplideSlide>
+                </Splide>
             </div>
         </div>
     );

@@ -10,8 +10,10 @@ import Winning from "./components/Winning.jsx";
 import Footer from "./components/Footer.jsx";
 
 import AnimationHero from "./components/AnimationHero.jsx";
-import AnimationPoster from "./components/AnimationPoster.jsx";
+
 import AnimationMessage from "./components/AnimationMessage.jsx";
+
+import AnimationPoster from "./components/AnimationPoster.jsx";
 
 
 export default function App() {
@@ -26,6 +28,8 @@ export default function App() {
 
             {/* <Poster /> */}
             <AnimationPoster />
+
+            
 
 
             {/* <Message /> */}
