@@ -7,7 +7,7 @@ const submittedText = "You're in";
 
 const JoinButtonFixed = ({ isHovered, handleMouseEnter, handleMouseLeave, showEmailInput, buttonClicked, submitted, handleToggleEmailInput, handleSubmit }) => {
     return (
-        <div className="fixed flex justify-center items-center left-0 right-0 z-50" style={{ top: '40px' }}>
+        <div className="fixed flex justify-center items-center left-0 right-0 z-50 " style={{ top: '40px' }}>
             {!buttonClicked && !submitted && (
                 <button
                     className="bg-transparent flex justify-center items-center text-textColorPrimary backdrop-blur-xl"

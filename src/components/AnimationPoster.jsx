@@ -73,18 +73,24 @@ function AnimationPoster(props) {
                         {header3}
                     </div>
                 </div>
+            <div className="container max-w-screen-xl mx-auto relative z-20 overflow-x-hidden">
+
                 <Splide
                     options={{
                         type: "loop",
-                        perPage: 3,
+                        // perPage: 3,
                         autoScroll: {
                             pauseOnHover: false,
                             pauseOnFocus: false,
-                            rewind: false,
+                            rewind: true,
                             speed: 1
                         },
                         arrows: false,
                         pagination: false,
+                            fixedWidth: '445px', // Fixed width for each slide
+
+                            gap: '12px',
+
                     }}
                     extensions={{ AutoScroll }}
                 >
@@ -107,6 +113,8 @@ function AnimationPoster(props) {
                         <img src={Navada} alt="Poster Navada" style={imageStyle} />
                     </SplideSlide>
                 </Splide>
+                                </div>
+
             </div>
         </div>
     );
