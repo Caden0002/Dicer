@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import SubmitButton from '/JoinButtonSubmit.svg'; // Adjust the path based on your file structure
 import SubmittedDeco from '/JoinSubmittedButtonDeco.png'; // Adjust the path based on your file structure
 
 const buttonText = "Join waitlist";
 const submittedText = "You're in";
 
-const JoinButtonFixed = ({ isHovered, handleMouseEnter, handleMouseLeave, showEmailInput, buttonClicked, submitted, handleToggleEmailInput, handleSubmit }) => {
+const JoinButtonFixed = ({
+    isHovered,
+    handleMouseEnter,
+    handleMouseLeave,
+    showEmailInput,
+    buttonClicked,
+    submitted,
+    handleToggleEmailInput,
+    handleSubmit
+}) => {
+    const [inputValue, setInputValue] = useState('');
+
+    const handleInputChange = (e) => setInputValue(e.target.value);
+
     return (
-        <div className="fixed flex justify-center items-center left-0 right-0 z-50 " style={{ top: '40px' }}>
+        <div className="fixed flex justify-center items-center left-0 right-0 z-50" style={{ top: '40px' }}>
             {!buttonClicked && !submitted && (
                 <button
                     className="bg-transparent flex justify-center items-center text-textColorPrimary backdrop-blur-xl"
@@ -20,7 +34,7 @@ const JoinButtonFixed = ({ isHovered, handleMouseEnter, handleMouseLeave, showEm
                         border: "1px solid",
                         backgroundColor: isHovered ? 'rgba(61, 61, 72, 0.8)' : 'transparent',
                         cursor: isHovered ? 'pointer' : 'none',
-                        boxShadow: isHovered ? 'inset 0 0 20px 2px #ffffff, 0 0 10px 2px #ffffff' : 'none',  // Adds both an inner and outer white glow when hovered
+                        boxShadow: isHovered ? 'inset 0 0 20px 2px #ffffff, 0 0 10px 2px #ffffff' : 'none',
                     }}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
@@ -33,10 +47,17 @@ const JoinButtonFixed = ({ isHovered, handleMouseEnter, handleMouseLeave, showEm
             )}
 
             {showEmailInput && !submitted && (
-                <div className="absolute mt-10 flex items-center">
+                <motion.div
+                    initial={{ opacity: 0 }} // Initial animation states
+                    animate={{ opacity: 1 }} // Animation states when shown
+                    transition={{ duration: 0.5 }} // Transition duration
+                    className="absolute mt-10 flex items-center"
+                >
                     <input
                         type="email"
-                        placeholder="john@dicer.xyz"
+                        placeholder={inputValue ? '' : "john@dicer.xyz"}
+                        value={inputValue}
+                        onChange={handleInputChange}
                         className="pl-4 pr-12 py-2 bg-white border border-gray-300 rounded-full focus:outline-none"
                         style={{
                             width: "185px",
@@ -46,27 +67,65 @@ const JoinButtonFixed = ({ isHovered, handleMouseEnter, handleMouseLeave, showEm
                             fontSize: "16px",
                         }}
                     />
-                    <button className="absolute right-0" onClick={handleSubmit}>
-                        <img src={SubmitButton} alt="Submit Button" style={{ width: "40px", height: "40px" }} />
-                    </button>
-                </div>
+                    <motion.button
+                        className="absolute right-0"
+                        onClick={handleSubmit}
+                        style={{ width: "40px", height: "40px" }}
+                    >
+                        <motion.img
+                            src={SubmitButton}
+                            alt="Submit Button"
+                            style={{ width: "40px", height: "40px" }}
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.15, ease: "easeIn" }}
+                        />
+                    </motion.button>
+                </motion.div>
             )}
 
             {submitted && (
-                <div className="absolute flex items-center justify-center text-white px-4 py-2 rounded-full backdrop-blur-xl overflow-hidden"
-                     style={{
-                         width: "185px",
-                         height: "40px",
-                         border: "1px solid white",
-                         borderRadius: "100px",
-                         cursor: isHovered ? 'pointer' : 'none',
-                         position: 'relative', // Ensure positioning context for absolute elements
-                     }}
+                <div
+                    className="absolute rounded-full flex items-center justify-center backdrop-blur-xl overflow-hidden"
+                    style={{
+                        width: "185px",
+                        height: "40px",
+                        border: "1px solid white",
+                        borderRadius: "100px",
+                        cursor: 'pointer',
+                        position: 'relative',
+                    }}
                 >
-                    <div className="font-SFUI pl-4" style={{ fontSize: '18px', fontWeight: 600, textAlign: 'center' }}>
-                        {submittedText}
-                    </div>
-                    <img src={SubmittedDeco} alt="Submitted Decoration" className="absolute right-32 w-1/2 z-0"  />
+                    <motion.img
+                        src={SubmittedDeco}
+                        alt="Submitted Decoration"
+                        className=" absolute right-32 w-1/2"
+                        initial={{ x: 200 }}
+                        animate={{ x: 0 }}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 600,
+                            damping: 10,
+                            mass: 1,
+                            velocity: 2
+                        }}
+                    />
+                    <motion.div
+                        className="flex items-center justify-center text-white px-4 py-2"
+                        initial={{ x: 200 }}
+                        animate={{ x: 0 }}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 600,
+                            damping: 10,
+                            mass: 1,
+                            velocity: 2
+                        }}
+                    >
+                        <div className="font-SFUI pl-8" style={{ fontSize: '18px', fontWeight: 600, textAlign: 'center' }}>
+                            {submittedText}
+                        </div>
+                    </motion.div>
                 </div>
             )}
         </div>

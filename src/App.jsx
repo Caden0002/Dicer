@@ -2,6 +2,8 @@
 
 import React from 'react';
 import JoinButtonParent from "./components/JoinButtonParent.jsx";
+import ButtonAnimation from "./components/ButtonAnimation.jsx";
+
 import Hero from "./components/Hero.jsx";
 import Catchphrase from "./components/Catchphrase.jsx";
 import Poster from "./components/Poster.jsx";
@@ -20,6 +22,7 @@ export default function App() {
     return (
         <>
             <JoinButtonParent />
+            {/* <ButtonAnimation /> */}
 
             {/* <Hero /> */}
             <AnimationHero />
