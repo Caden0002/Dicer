@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import SubmitButton from '/JoinButtonSubmit.svg'; // Adjust the path based on your file structure
 import SubmittedDeco from '/JoinSubmittedButtonDeco.png'; // Adjust the path based on your file structure
@@ -7,11 +7,25 @@ const buttonText = "Join waitlist";
 const submittedText = "You're in";
 
 const JoinButtonAbsolute = React.forwardRef(({ isHovered, handleMouseEnter, handleMouseLeave, showEmailInput, buttonClicked, submitted, handleToggleEmailInput, handleSubmit }, ref) => {
+    useEffect(() => {
+        // Preload SubmitButton image
+        const imgSubmit = new Image();
+        imgSubmit.src = SubmitButton;
+        imgSubmit.onload = () => {
+            console.log('SubmitButton image preloaded');
+        };
 
-      const [inputValue, setInputValue] = useState('');
+        // Preload SubmittedDeco image
+        const imgSubmittedDeco = new Image();
+        imgSubmittedDeco.src = SubmittedDeco;
+        imgSubmittedDeco.onload = () => {
+            console.log('SubmittedDeco image preloaded');
+        };
+    }, []);
 
-          const handleInputChange = (e) => setInputValue(e.target.value);
+    const [inputValue, setInputValue] = useState('');
 
+    const handleInputChange = (e) => setInputValue(e.target.value);
 
     return (
         <div ref={ref} className={`absolute bottom-52 flex justify-center items-center left-0 right-0 z-50`}>
@@ -42,7 +56,7 @@ const JoinButtonAbsolute = React.forwardRef(({ isHovered, handleMouseEnter, hand
                 </motion.button>
             )}
 
-{showEmailInput && !submitted && (
+            {showEmailInput && !submitted && (
                 <motion.div
                     initial={{ opacity: 0 }} // Initial animation states
                     animate={{ opacity: 1 }} // Animation states when shown

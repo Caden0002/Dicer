@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import SubmitButton from '/JoinButtonSubmit.svg'; // Adjust the path based on your file structure
 import SubmittedDeco from '/JoinSubmittedButtonDeco.png'; // Adjust the path based on your file structure
@@ -16,6 +16,22 @@ const JoinButtonFixed = ({
     handleToggleEmailInput,
     handleSubmit
 }) => {
+    useEffect(() => {
+        // Preload SubmitButton image
+        const imgSubmit = new Image();
+        imgSubmit.src = SubmitButton;
+        imgSubmit.onload = () => {
+            console.log('SubmitButton image preloaded');
+        };
+
+        // Preload SubmittedDeco image
+        const imgSubmittedDeco = new Image();
+        imgSubmittedDeco.src = SubmittedDeco;
+        imgSubmittedDeco.onload = () => {
+            console.log('SubmittedDeco image preloaded');
+        };
+    }, []);
+
     const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (e) => setInputValue(e.target.value);
