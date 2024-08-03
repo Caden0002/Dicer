@@ -1,6 +1,6 @@
-import '../../static/fonts.css';
-import BackgroundVideo from '/WinningBackgroundVideo.mp4'; // Import the video file
-import WinningBackgroundDeco from '/WinningBackgroundDeco.svg'; // Import the background image
+import '../../../static/fonts.css';
+import BackgroundVideo from '/LandingAssets/WinningBackgroundVideo.mp4'; // Import the video file
+import WinningBackgroundDeco from '/LandingAssets/WinningBackgroundDeco.svg'; // Import the background image
 
 const background = "bg-backgroundColorPrimary"; // Replace with the correct Tailwind class for your primary background color
 const screenHeight = "h-[969px]"; // Use Tailwind's h-screen for full screen height

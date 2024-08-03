@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import SubmitButton from '/JoinButtonSubmit.svg'; // Adjust the path based on your file structure
-import SubmittedDeco from '/JoinSubmittedButtonDeco.png'; // Adjust the path based on your file structure
+import SubmitButton from '/LandingAssets/JoinButtonSubmit.svg'; // Adjust the path based on your file structure
+import SubmittedDeco from '/LandingAssets/JoinSubmittedButtonDeco.png'; // Adjust the path based on your file structure
 
 const buttonText = "Join waitlist";
 const submittedText = "You're in";

@@ -1,12 +1,12 @@
 import '../../static/fonts.css';
-import DicerLogo from '/DicerLogoWhite.svg';
-import RightsDices from '/FooterRightsIcons.svg';
-import EmailSubmitButton from '/FooterEmailDice.svg';
-import Twitter from '/FooterTwitter.svg';
-import Medium from '/FooterMedium.svg';
-import Telegram from '/FooterTelegram.svg';
-import Discord from '/FooterDiscord.svg';
-import Github from '/FooterGithub.svg';
+import DicerLogo from '/LandingAssets/DicerLogoWhite.svg';
+import RightsDices from '/LandingAssets/FooterRightsIcons.svg';
+import EmailSubmitButton from '/LandingAssets/FooterEmailDice.svg';
+import Twitter from '/LandingAssets/FooterTwitter.svg';
+import Medium from '/LandingAssets/FooterMedium.svg';
+import Telegram from '/LandingAssets/FooterTelegram.svg';
+import Discord from '/LandingAssets/FooterDiscord.svg';
+import Github from '/LandingAssets/FooterGithub.svg';
 
 const background = "bg-backgroundColorPrimary";
 const rights1 = "© ";

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import '../../static/fonts.css';
-import messageImage1 from '/Message1.png'; // Import the image file
-import messageImage2 from '/Message2.png'; // Import the image file
-import MessageBackgroundDeco from '/MessageBackgroundDeco.svg'; // Import the background image
+import '../../../static/fonts.css';
+import messageImage1 from '/LandingAssets/Message1.png'; // Import the image file
+import messageImage2 from '/LandingAssets/Message2.png'; // Import the image file
+import MessageBackgroundDeco from '/LandingAssets/MessageBackgroundDeco.svg'; // Import the background image
 
 const background = "bg-backgroundColorPrimary"; // Replace with the correct Tailwind class for your primary background color
 const header1 = "Chip";

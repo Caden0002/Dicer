@@ -1,43 +1,22 @@
-// App.jsx
-
 import React from 'react';
-import JoinButtonParent from "./components/JoinButtonParent.jsx";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Make sure to import the correct dependencies
+import LandingPage from "./pages/LandingPage.jsx";
+import GamePage from "./pages/GamePage.jsx";
+// import ProfilePage from "./pages/ProfilePage.jsx";
 
-import Hero from "./components/Hero.jsx";
-import Catchphrase from "./components/Catchphrase.jsx";
-import Poster from "./components/Poster.jsx";
-import Message from "./components/Message.jsx";
-import Winning from "./components/Winning.jsx";
-import Footer from "./components/Footer.jsx";
-
-import AnimationHero from "./components/AnimationHero.jsx";
-
-import AnimationMessage from "./components/AnimationMessage.jsx";
-
-import AnimationPoster from "./components/AnimationPoster.jsx";
 
 
 export default function App() {
+
+
+
     return (
-        <>
-            <JoinButtonParent />
-
-            {/* <Hero /> */}
-            <AnimationHero />
-
-            <Catchphrase />
-
-            {/* <Poster /> */}
-            <AnimationPoster />
-
-            
-
-
-            {/* <Message /> */}
-            <AnimationMessage />
-
-            <Winning />
-            <Footer />
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/games" element={<GamePage />} />
+                {/* <Route path="/profile" element={<ProfilePage />} /> */}
+            </Routes>
+        </Router>
     );
 }

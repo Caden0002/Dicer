@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import heroDicerLogo from '/HeroDicerLogo.mp4'; // Import the video file
-import heroBackground from '/HeroBackground.mp4'; // Import the video file
+import heroDicerLogo from '/LandingAssets/HeroDicerLogo.mp4'; // Import the video file
+import heroBackground from '/LandingAssets/HeroBackground.mp4'; // Import the video file
 
 const background = "bg-backgroundColorPrimary";
 

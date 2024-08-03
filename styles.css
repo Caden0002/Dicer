@@ -1,0 +1,43 @@
+/* Dots */
+
+
+/* the whole component size */
+  .slick-dots {
+    width: 100%;
+    height: 62px;
+  }
+
+/* individual dots */
+  .ft-slick__dots--custom {
+    height: 14px;
+    width: 14px;
+    background-color: #475467;
+    border-radius: 9999px;
+    align-items: center; /* Vertically center dots */
+
+    margin-top: 20px; /* Add top margin to each dot */
+
+  }
+
+  .slick-dots .slick-active .ft-slick__dots--custom {
+    background-color: #ffffff;
+  }
+
+.game-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms ease, box-shadow 300ms ease; /* Added transition for box-shadow */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Example border styling */
+    border-radius: 14px; /* Example border radius */
+}
+
+.game-image:hover {
+    box-shadow:  0 0 8px 2px rgba(255, 255, 255, 0.6);
+}
+
+.game-image:active {
+    transform: scale(0.92);
+}
+
+

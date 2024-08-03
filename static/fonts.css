@@ -123,13 +123,50 @@ https://www.figma.com/design/byyZeyTtmg2JoxOo8zI5FG/INT_Hi-Fidelity?node-id=658-
   letter-spacing: 0;
 }
 
+
+/* ---------------------------Unique One Time Fonts--------------------------- */
+
 .sfuiFooter {
   font-family: 'SFUI', sans-serif;
   font-size: 16px;
-  font-weight: 400; /* Semi-bold */
+  font-weight: 400;
   line-height: 118%;
   letter-spacing: 0;
 }
+
+.sfuiGameButton1 {
+  font-family: 'SFUI', sans-serif;
+  font-size: 20px;
+  font-weight: 300; 
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.sfuiGameButton2 {
+  font-family: 'SFUI', sans-serif;
+  font-size: 20px;
+  font-weight: 500; 
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.sfuiQuestCardTitle {
+  font-family: 'SFUI', sans-serif;
+  font-size: 18px;
+  font-weight: 400; 
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.sfuiNavbarLinks {
+  font-family: 'SFUI', sans-serif;
+  font-size: 16px;
+  font-weight: 500; 
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+
 
 
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import '../../static/fonts.css';
+import '../../../static/fonts.css';
 
 const background = "bg-backgroundColorPrimary"; // Replace with the correct Tailwind class for your primary background color
 const screenHeight = "h-[969px]"; // Use Tailwind's h-screen for full screen height

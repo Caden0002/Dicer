@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import '../../static/fonts.css';
-import PosterBackgroundDeco from '/PosterBackgroundDeco.svg'; // Import the background image
+import '../../../static/fonts.css';
+import PosterBackgroundDeco from '/LandingAssets/PosterBackgroundDeco.svg'; // Import the background image
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-import Brooklyn from '/PosterBrooklyn.png';
-import Macao from '/PosterMacao.png';
-import Navada from '/PosterNavada.png';
+import Brooklyn from '/LandingAssets/PosterBrooklyn.png';
+import Macao from '/LandingAssets/PosterMacao.png';
+import Navada from '/LandingAssets/PosterNavada.png';
 
 const background = "bg-backgroundColorPrimary";
 
