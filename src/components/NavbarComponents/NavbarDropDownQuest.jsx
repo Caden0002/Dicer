@@ -48,7 +48,7 @@ const NavbarDropDownQuest = ({ isHovered }) => {
         <React.Fragment>
             <div className="absolute" style={{ height: '30px', width: '300px', top: 'px', left: '-125px', zIndex: '10' }}></div>
 
-            <div className="absolute" style={{ top: '24px', left: '-125px', zIndex: '10' }}>
+            <div className="absolute" style={{ top: '54px', left: '-125px', zIndex: '10' }}>
                 {quests.map((quest, index) => (
                     <div key={index} className="flex items-center backdrop-blur-xl mb-2 pl-2 pr-5 pt-1 pb-1"
                          style={{ 

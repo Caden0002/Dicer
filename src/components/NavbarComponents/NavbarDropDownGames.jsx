@@ -10,7 +10,7 @@ const NavbarDropDownGames = ({ isHovered }) => {
     return (
         <React.Fragment>
             <div className="absolute" style={{ height: '30px', width: '228px', top: 'px', left: '-79px', zIndex: '10' }}></div>
-            <div className="absolute border" style={{ background: 'rgba(4, 4, 5, 0.6)', width: '228px', height: '190px', borderRadius: '14px', borderColor: 'rgba(255, 255, 255, 0.25)', left: '-79px', top: '24px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridGap: '4px', padding: '4px' }}>
+            <div className="absolute border" style={{ background: 'rgba(4, 4, 5, 0.6)', width: '228px', height: '190px', borderRadius: '14px', borderColor: 'rgba(255, 255, 255, 0.25)', left: '-79px', top: '54px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridGap: '4px', padding: '4px' }}>
                 <div className="relative bg-cover bg-center h-full">
                     <img 
                         src={Macau} 
