@@ -10,7 +10,7 @@ import '../../../styles.css'
 const AnnouncementSplide = () => {
 
 const options = {
-    fixedWidth: '1170px', // Fixed width for each slide
+    fixedWidth: '83vw', // Fixed width for each slide
     type: 'loop',
     perPage: 1,
     focus: 'center',

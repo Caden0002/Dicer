@@ -10,7 +10,7 @@ export default function AnnouncementPoster1() {
         border: '1px solid rgba(255, 255, 255, 0.24)',
         borderRadius: '4px',
         overflow: 'hidden', // Ensures border radius is applied correctly
-        width: '1170px',
+        width: '80vw', // Changed to 80% of viewport width
         height: '578px',
     };
 
