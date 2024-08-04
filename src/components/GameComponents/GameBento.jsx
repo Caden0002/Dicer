@@ -5,8 +5,8 @@ const background = "bg-backgroundColorPrimary"; // Replace with the correct Tail
 
 function GameBento(props) {
     return (
-        <div id="GameBento"  className={`relative flex h-full ${background}`}>
-            <div className="container max-w-screen-xl mx-auto flex flex-col items-center relative mt-16 z-20">
+        <div id="GameBento"  className={`relative flex h-full  ${background}`}>
+            <div className="container max-w-screen-xl mx-auto flex flex-col items-center relative mt-16 mb-16 sm:mb-0 z-20 ">
                 <div className="grid sm:grid-cols-2 sm:grid-rows-2 gap-3  p-3 w-full h-full ">
                     <div className="">
                         <GameCard title="Pick4" />

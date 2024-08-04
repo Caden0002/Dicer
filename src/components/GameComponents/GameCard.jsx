@@ -60,7 +60,6 @@ export default function GameCard({ title }) {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         border: '1px solid rgba(255, 255, 255, 0.24)',
-        borderRadius: '4px',
     };
 
     const textStyle = {
@@ -84,7 +83,7 @@ export default function GameCard({ title }) {
     };
 
     return (
-        <div className="flex justify-center text-center h-[358px] sm:h-[428px] md:h-[578px]" style={cardStyle}>
+        <div className="flex justify-center text-center h-[358px] sm:h-[428px] md:h-[578px] rounded-2xl sm:rounded" style={cardStyle}>
             <div className="mt-14">
                 <div className="brockmann6" style={textStyle}>{gameName}</div>
                 <div className="sfui3 pt-3" style={textStyle}>{description}</div>

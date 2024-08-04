@@ -45,7 +45,7 @@ function Footer(props) {
     return (
         <div className={`relative flex h-full ${background}`}>
             <div className="container max-w-screen-xl mx-auto flex flex-col justify-center items-center relative">
-                <div className='py-12 sm:py-24 px-4 sm:px-20 w-full '>
+                <div className='py-36 sm:py-24 px-4 md:px-20 w-full '>
                     <div class="grid grid-row md:grid-cols-[30%,16.5%,16.5%,16.5%,20%] gap-y-8 md:gap-y-0">
                         {/* Dicer Column 1 */}
                         <div className="flex flex-col row-start-5 md:row-start-1 justify-between">
