@@ -45,14 +45,14 @@ function Footer(props) {
     return (
         <div className={`relative flex h-full ${background}`}>
             <div className="container max-w-screen-xl mx-auto flex flex-col justify-center items-center relative">
-                <div className='py-24 px-20 w-full '>
-                    <div class="grid grid-cols-[30%,16.5%,16.5%,16.5%,20%]">
-                        {/* Rights Column */}
-                        <div className="flex flex-col justify-between">
+                <div className='py-12 sm:py-24 px-4 sm:px-20 w-full '>
+                    <div class="grid grid-row md:grid-cols-[30%,16.5%,16.5%,16.5%,20%] gap-y-8 md:gap-y-0">
+                        {/* Dicer Column 1 */}
+                        <div className="flex flex-col row-start-5 md:row-start-1 justify-between">
                             <div className="">
                                 <img src={DicerLogo} alt="Dicer Logo" className="w-8 h-8" />
                             </div>
-                            <div className="sfui5 text-textColorTertiary flex gap-1">
+                            <div className="mt-8 sfui5 text-textColorTertiary flex gap-1">
                                 {rights1}
                                 <img src={RightsDices} alt="Dicer Logo" className="" />
                                 <div className="">
@@ -65,7 +65,7 @@ function Footer(props) {
                         </div>
 
                         {/* Footer Links */}
-                        {/* Column 1 */}
+                        {/* Column 2 */}
                         <div>
                             <h3 className="sfui4 text-textColorPrimary mb-6">{column1Header}</h3>
                             <ul className="sfuiFooter text-textColorFooterLink space-y-4">
@@ -74,7 +74,7 @@ function Footer(props) {
                                 ))}
                             </ul>
                         </div>
-                        {/* Column 2 */}
+                        {/* Column 3 */}
                         <div>
                             <h3 className="sfui4 text-textColorPrimary mb-6">{column2Header}</h3>
                             <ul className="sfuiFooter text-textColorFooterLink space-y-4">
@@ -83,7 +83,7 @@ function Footer(props) {
                                 ))}
                             </ul>
                         </div>
-                        {/* Column 3 */}
+                        {/* Column 4 */}
                         <div>
                             <h3 className="sfui4 text-textColorPrimary mb-6">{column3Header}</h3>
                             <ul className="sfuiFooter text-textColorFooterLink space-y-4">
@@ -93,11 +93,11 @@ function Footer(props) {
                             </ul>
                         </div>
 
-                        {/* Email */}
+                        {/* Email Column 5*/}
                         <div className="bg-transparent flex flex-col justify-between">
                             <div className=''>
                                 <h3 className="sfui4 text-textColorPrimary mb-4">{emailText}</h3>
-                                <div className="relative sfui4 font-light text-textColorTertiary block w-full py-3 px-3 border border-textColorTertiary border-1 rounded">
+                                <div className="relative sfui4 font-light text-textColorTertiary block w-full max-w-[295px] py-3 px-3 border border-textColorTertiary border-1 rounded">
                                     <input
                                         type="email"
                                         placeholder="Email"
@@ -110,7 +110,7 @@ function Footer(props) {
                                     </button>
                                 </div>
                             </div>
-                            <div className="flex justify-between">
+                            <div className="mt-8 md:mt-0 flex justify-between max-w-[295px]">
                                 <img src={Twitter} alt="Twitter" className="w-10 h-10" />
                                 <img src={Medium} alt="Medium" className="w-10 h-10 " />
                                 <img src={Telegram} alt="Telegram" className="w-10 h-10" />

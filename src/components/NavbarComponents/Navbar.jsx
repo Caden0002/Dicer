@@ -19,8 +19,8 @@ const Navbar = () => {
 
     // Define animation variants
     const variants = {
-        open: { opacity: 1 }, // Ensure this translates to 'transform: translateY(0px);'
-        closed: { opacity: 0 }, // Ensure this translates to 'transform: translateY(-50px);'
+        open: { opacity: 1 }, 
+        closed: { opacity: 0 },
     };
 
     return (
