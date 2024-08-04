@@ -28,7 +28,7 @@ const Navbar = () => {
             <div className="mx-auto backdrop-blur-xl rounded-2xl pointer-events-auto" style={{ background: 'rgba(4, 4, 5, 0.6)', border: '1px solid rgba(255, 255, 255, 0.25)' }}>
                 <div className="inline-flex justify-center items-center sfuiNavbarLinks cursor-pointer text-textColorSecondary px-4 space-x-11">
                     <img src={DicerLogo} alt="Dicer Logo" className="cursor-pointer" style={{ width: '18px', height: '18px' }} />
-                    {navLinks.map((navLink, index) => (
+                    {navLinks.slice(0, 2).map((navLink, index) => (
                         <div
                             key={index}
                             className="py-4 hover:text-textColorPrimary relative group"
@@ -68,6 +68,48 @@ const Navbar = () => {
                             </AnimatePresence>
                         </div>
                     ))}
+                    <div className="hidden sm:flex">
+                        {navLinks.slice(2).map((navLink, index) => (
+                            <div
+                                key={index + 2}
+                                className="py-4 hover:text-textColorPrimary relative group"
+                                onMouseEnter={() => {
+                                    if (index + 2 === 2) setIsHovered1(true);
+                                    if (index + 2 === 3) setIsHovered2(true);
+                                }}
+                                onMouseLeave={() => {
+                                    if (index + 2 === 2) setIsHovered1(false);
+                                    if (index + 2 === 3) setIsHovered2(false);
+                                }}
+                            >
+                                <Link to={navLink.href} className="relative group">
+                                    {navLink.text}
+                                </Link>
+                                <AnimatePresence>
+                                    {(index + 2 === 2 && isHovered1) && (
+                                        <motion.div
+                                            initial="closed"
+                                            animate="open"
+                                            variants={variants}
+                                            transition={{ type: "spring", duration: 0.3, mass: 1, stiffness: 168.8, damping: 15 }}
+                                        >
+                                            <NavbarDropDownGames isHovered={isHovered1} />
+                                        </motion.div>
+                                    )}
+                                    {(index + 2 === 3 && isHovered2) && (
+                                        <motion.div
+                                            initial="closed"
+                                            animate="open"
+                                            variants={variants}
+                                            transition={{ type: "spring", duration: 0.3, mass: 1, stiffness: 168.8, damping: 15 }}
+                                        >
+                                            <NavbarDropDownQuest isHovered={isHovered2} />
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        ))}
+                    </div>
                     <Link to="/profile">
                         <img src={ProfileLogo} alt="Profile Logo" className="cursor-pointer" style={{ width: '24px', height: '24px' }} />
                     </Link>
