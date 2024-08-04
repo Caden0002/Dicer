@@ -58,7 +58,7 @@ export default function QuestCard({ title, value }) {
     const description = descriptions[title];
 
     return (
-        <div className="w-50 h-auto flex flex-col justify-center items-center ">
+        <div className="w-50 h-auto flex flex-col justify-center items-center mx-auto ">
             <img src={image} alt={title} className="w-auto h-auto" />
             <div className="py-2 space-y-1 text-center">
                 <div className="sfuiQuestCardTitle text-textColorPrimary">
