@@ -15,8 +15,8 @@ function Hero(props) {
     return (
         <div className={`relative h-[90vh] flex ${background}`} style={{ backgroundImage: `url(${GamePageHeroBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="container max-w-screen-xl mx-auto flex flex-col justify-center items-center relative z-10">
-                <div className="px-32 grid grid-cols-12 w-full">
-                    <div className="col-span-4 text-left space-y-11 pt-20">
+                <div className="px-4 sm:px-32 grid grid-cols-12 w-full">
+                    <div className="col-span-12 sm:col-span-10 md:col-span-4 text-left space-y-11 pt-20">
                         {/* Title and subTitle */}
                         <div className='space-y-4'>
                             <div className="sfui3 text-textColorTertiary flex">

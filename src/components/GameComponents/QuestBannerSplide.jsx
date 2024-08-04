@@ -38,7 +38,7 @@ function QuestBanner() {
 
     return (
         <div id="QuestBanner" className={`relative flex h-full ${background}`}>
-            <div className="container max-w-screen-xl mx-auto p-6 flex flex-col relative z-20 overflow-x-hidden">
+            <div className="container max-w-screen-xl mx-auto p-4 flex flex-col relative z-20 overflow-x-hidden">
                 {isMobile ? (
                     <>
                         <div className="flex justify-between items-center mb-16">
