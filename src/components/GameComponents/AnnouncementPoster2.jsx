@@ -23,15 +23,8 @@ export default function AnnouncementPoster2() {
         height: '100%',
     };
 
-    const header1Style = {
-        // Add any specific styles for header1 if needed
-    };
-
-    const header2Style = {
-        fontSize: '36px',
-        fontWeight: 300,
-        lineHeight: '120%',
-    };
+      const header1Style = 'text-5xl md:text-6xl font-semibold leading-tight';
+    const header2Style = 'text-lg md:text-2xl font-light leading-normal';
 
     const buttonStyle = {
         border: '2px solid #FFFFFF',
@@ -46,12 +39,12 @@ export default function AnnouncementPoster2() {
     return (
         <div className="flex flex-col justify-center items-center snap-center" style={wrapperStyle}>
             <div className="flex flex-col justify-center items-center text-center space-y-4" style={posterStyle}>
-                <div className="brockmann3 text-textColorPrimary" style={header1Style}>
-                    {header1}
-                </div>
-                <div className="font-SF-UI text-textColorPrimary" style={header2Style}>
-                    {header2}
-                </div>
+        <div className={`font-Brockmann text-textColorPrimary ${header1Style}`}>
+            {header1}
+        </div>
+        <div className={`font-SF-UI text-textColorPrimary ${header2Style}`}>
+            {header2}
+        </div>
                 <button style={buttonStyle}>
                     {buttonText}
                 </button>
