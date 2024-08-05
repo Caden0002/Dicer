@@ -13,11 +13,11 @@ export default function LandingPage() {
         <>
             <JoinButtonParent />
             <AnimationHero />
-            {/* <Catchphrase />
-            <AnimationPoster />
-            <AnimationMessage />
-            <Winning />
-            <Footer /> */}
+            <Catchphrase />
+            {/* <AnimationPoster /> */}
+            {/* <AnimationMessage /> */}
+            {/* <Winning /> */}
+            {/* <Footer /> */}
         </>
     );
 }

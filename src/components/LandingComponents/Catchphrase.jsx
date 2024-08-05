@@ -14,42 +14,78 @@ function Catchphrase(props) {
     const header3Ref = useRef(null);
     const [animatedHeader2, setAnimatedHeader2] = useState(false);
     const [animatedHeader3, setAnimatedHeader3] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
 
     useEffect(() => {
-        const observerOptions = {
-            root: null,
-            rootMargin: '-150px',
-            threshold: 1 // Adjust threshold as needed, 0.5 means trigger when 50% of the element is visible
-        };
+        const handleResize = () => setIsMobile(window.innerWidth <= 1000);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
-        const handleIntersection = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target === header2Ref.current && !animatedHeader2) {
-                        setAnimatedHeader2(true);
+    useEffect(() => {
+        if (!isMobile) {
+            const observerOptions = {
+                root: null,
+                rootMargin: '-150px',
+                threshold: 1 // Adjust threshold as needed
+            };
+
+            const handleIntersection = (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target === header2Ref.current && !animatedHeader2) {
+                            setAnimatedHeader2(true);
+                        }
+                        if (entry.target === header3Ref.current && !animatedHeader3) {
+                            setAnimatedHeader3(true);
+                        }
                     }
-                    if (entry.target === header3Ref.current && !animatedHeader3) {
-                        setAnimatedHeader3(true);
-                    }
-                }
-            });
-        };
+                });
+            };
 
-        const observerHeader2 = new IntersectionObserver(handleIntersection, observerOptions);
-        const observerHeader3 = new IntersectionObserver(handleIntersection, observerOptions);
+            const observerHeader2 = new IntersectionObserver(handleIntersection, observerOptions);
+            const observerHeader3 = new IntersectionObserver(handleIntersection, observerOptions);
 
-        if (header2Ref.current) {
-            observerHeader2.observe(header2Ref.current);
+            if (header2Ref.current) {
+                observerHeader2.observe(header2Ref.current);
+            }
+            if (header3Ref.current) {
+                observerHeader3.observe(header3Ref.current);
+            }
+
+            return () => {
+                observerHeader2.disconnect();
+                observerHeader3.disconnect();
+            };
         }
-        if (header3Ref.current) {
-            observerHeader3.observe(header3Ref.current);
-        }
+    }, [animatedHeader2, animatedHeader3, isMobile]);
 
-        return () => {
-            observerHeader2.disconnect();
-            observerHeader3.disconnect();
-        };
-    }, [animatedHeader2, animatedHeader3]);
+    if (isMobile) {
+        return (
+            <div className={`relative flex ${background} ${screenHeight}`}>
+                <div className="container max-w-screen-xl mx-auto flex flex-col justify-center items-center relative py-4 overflow-hidden">
+                    <div
+                        className="font-Brockmann text-7xl font-semibold text-textColorPrimary text-center mb-4"
+                        style={{ letterSpacing: '-0.03em' }}
+                    >
+                        {header1}
+                    </div>
+                    <div
+                        className="font-Brockmann text-7xl font-semibold text-textColorPrimary text-center mb-4"
+                        style={{ letterSpacing: '-0.03em' }}
+                    >
+                        {header2}
+                    </div>
+                    <div
+                        className="font-Brockmann text-7xl font-semibold text-textColorPrimary text-center"
+                        style={{ letterSpacing: '-0.03em' }}
+                    >
+                        {header3}
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className={`relative flex ${background} ${screenHeight}`}>
@@ -71,7 +107,7 @@ function Catchphrase(props) {
                             ref={header3Ref}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: animatedHeader3 ? 1 : 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }} // Added delay of 0.5s
+                            transition={{ duration: 0.5, delay: 0.3 }} // Added delay of 0.3s
                         >
                             {header3}
                         </motion.span>
