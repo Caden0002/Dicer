@@ -28,7 +28,7 @@ const JoinButtonAbsolute = React.forwardRef(({ isHovered, handleMouseEnter, hand
     const handleInputChange = (e) => setInputValue(e.target.value);
 
     return (
-        <div ref={ref} className={`absolute bottom-52 flex justify-center items-center left-0 right-0 z-50`}>
+        <div ref={ref} className={`absolute md:bottom-52 flex justify-center items-center left-0 right-0 z-50`}>
             {!buttonClicked && !submitted && (
                 <motion.button
                     initial={{ opacity: 0 }}

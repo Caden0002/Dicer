@@ -74,7 +74,7 @@ function AnimationHero(props) {
     }, []);
 
     return (
-        <div className={`relative h-[90vh] flex ${background}`}>
+        <div className={`relative h-[85vh] sm:h-screen flex ${background}`}>
             <motion.video
                 autoPlay
                 loop
