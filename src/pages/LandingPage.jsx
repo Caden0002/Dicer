@@ -11,13 +11,13 @@ import AnimationPoster from "../components/LandingComponents/AnimationPoster.jsx
 export default function LandingPage() {
     return (
         <>
-            <JoinButtonParent />
+            {/* <JoinButtonParent /> */}
             <AnimationHero />
-            <Catchphrase />
+            {/* <Catchphrase />
             <AnimationPoster />
             <AnimationMessage />
             <Winning />
-            <Footer />
+            <Footer /> */}
         </>
     );
 }
