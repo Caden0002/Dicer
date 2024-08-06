@@ -14,7 +14,7 @@ export default function LandingPage() {
             <JoinButtonParent />
             <AnimationHero />
             <Catchphrase />
-            {/* <AnimationPoster /> */}
+            <AnimationPoster />
             {/* <AnimationMessage /> */}
             {/* <Winning /> */}
             {/* <Footer /> */}
