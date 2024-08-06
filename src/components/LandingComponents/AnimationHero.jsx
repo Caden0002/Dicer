@@ -94,7 +94,7 @@ function AnimationHero(props) {
             >
                 {isTablet ? (
                     <>
-                        <video width="76" height="76" autoPlay loop muted className="mb-4">
+                        <video width="76" height="76" autoPlay loop muted playsInline className="mb-4">
                             <source src={heroDicerLogo} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
