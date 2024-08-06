@@ -51,12 +51,12 @@ function AnimationMessage(props) {
                 />
 
                 <div className="text-textColorPrimary2 py-24 leading-tight px-4">
-                    <div className="flex brockmann5 text-textColorPrimary2">
+                    <div className="flex brockmann5 text-textColorPrimary2 ">
                         <div style={{
                             background: '-webkit-linear-gradient(180deg, #FF7A00 0%, #FFE500 10%, #00E0FF 70%, #FF549C 87%)',
                             WebkitBackgroundClip: 'text',
                             backgroundClip: 'text',
-                            color: 'rgba(255, 255, 255, 0.4)', // Transparent white color with 50% opacity
+                            color: 'rgba(255, 255, 255, 0)', 
                         }}>
                             {header1}
                         </div>
