@@ -15,7 +15,7 @@ export default function LandingPage() {
             <AnimationHero />
             <Catchphrase />
             <AnimationPoster />
-            {/* <AnimationMessage /> */}
+            <AnimationMessage />
             {/* <Winning /> */}
             {/* <Footer /> */}
         </>
