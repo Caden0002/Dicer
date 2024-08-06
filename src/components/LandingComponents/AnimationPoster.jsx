@@ -52,7 +52,7 @@ function AnimationPoster(props) {
     return (
         <div className={`relative flex h-full ${background}`}>
             <img src={PosterBackgroundDeco} alt="Background Decoration" className="absolute z-10 w-full h-full" />
-            <div className="container max-w-screen-xl mx-auto flex flex-col items-center relative z-20 overflow-hidden ">
+            <div className=" mx-auto flex flex-col items-center relative z-20 overflow-hidden ">
                 <div className="my-24">
                     {/* Mobile View */}
                     {isMobile && (
@@ -115,7 +115,7 @@ function AnimationPoster(props) {
                         </div>
                     )}
                 </div>
-                <div className="container max-w-screen-xl mx-auto relative z-20 overflow-x-hidden">
+                <div className=" mx-auto relative z-20 overflow-x-hidden">
                     <Splide
                         options={{
                             type: "loop",
