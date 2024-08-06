@@ -83,6 +83,7 @@ function AnimationHero(props) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 1 }}
                 className="absolute inset-0 object-cover w-full h-full z-0"
+                style={{ objectPosition: 'right' }} // Adds inline style for object-position
             >
                 <source src={heroBackground} type="video/mp4" />
                 Your browser does not support the video tag.
