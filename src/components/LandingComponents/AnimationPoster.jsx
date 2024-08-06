@@ -60,13 +60,12 @@ function AnimationPoster(props) {
                             <div className="font-Brockmann text-5xl font-semibold text-textColorPrimary2" style={{ letterSpacing: '-0.02em' }}>
                                 {header1}
                             </div>
-                            <div className="font-Brockmann text-5xl font-semibold text-textColorPrimary2 mt-2 pb-2"
+                            <div className="font-Brockmann text-5xl font-semibold text-[#ffffff]/[0.2] md:text-[#ffffff]/[0.4] mt-2 pb-2"
                                 style={{
                                     letterSpacing: '-0.02em',
                                     background: '-webkit-linear-gradient(180deg, #33FF00 0%, #00FF0A 13%, #FCFF66 28%, #FF0000 43%, #FF0000 58%, #00E0FF 70%, #FF549C 87%)',
                                     WebkitBackgroundClip: 'text',
                                     backgroundClip: 'text',
-                                    color: 'rgba(255, 255, 255, 0.4)',
                                 }}>
                                 evergro{Array.from({ length }, (_, index) => (
                                     <motion.span
