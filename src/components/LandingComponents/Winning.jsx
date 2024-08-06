@@ -13,7 +13,7 @@ const subheader = (
     <>
         Accumulate <span style={{ color: '#FFFFFF' }}>points</span>, 
         compete in the <span style={{ color: '#FFFFFF' }}>leaderboard</span>, 
-        and
+        and&nbsp;
         <span className="hidden md:inline"> <br /> </span>
         win <span style={{ color: '#FFFFFF' }}>lottery prizes</span>.
         We have something for everyone.
@@ -46,11 +46,10 @@ function Winning(props) {
                 <div style={{ paddingBottom: "300px" }}>
                     <div className="brockmann5 text-textColorPrimary flex flex-col md:flex-row justify-center items-center leading-tight">
                         <div>{header1}</div>
-                        <div className="" style={{
+                        <div className="text-[#ffffff]/[0.2] md:text-[#ffffff]/[0.4]" style={{
                             background: '-webkit-linear-gradient(180deg, #FE5E26 0%, #FF0000 20%, #FFE500 100%)',
                             WebkitBackgroundClip: 'text',
                             backgroundClip: 'text',
-                            color: 'rgba(255, 255, 255, 0.4)',
                         }}>
                             &nbsp;{header2}
                         </div>
