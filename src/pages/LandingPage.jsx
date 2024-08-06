@@ -16,8 +16,8 @@ export default function LandingPage() {
             <Catchphrase />
             <AnimationPoster />
             <AnimationMessage />
-            {/* <Winning /> */}
-            {/* <Footer /> */}
+            <Winning />
+            <Footer />
         </>
     );
 }
