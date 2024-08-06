@@ -52,7 +52,7 @@ function AnimationPoster(props) {
     return (
         <div className={`relative flex h-full ${background}`}>
             <img src={PosterBackgroundDeco} alt="Background Decoration" className="absolute z-10 w-full h-full" />
-            <div className="container max-w-screen-xl mx-auto flex flex-col items-center relative z-20 overflow-hidden">
+            <div className="container max-w-screen-xl mx-auto flex flex-col items-center relative z-20 overflow-hidden ">
                 <div className="my-24">
                     {/* Mobile View */}
                     {isMobile && (

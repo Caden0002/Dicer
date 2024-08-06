@@ -44,13 +44,13 @@ function AnimationMessage(props) {
                     ref={image1Ref}
                     src={messageImage1}
                     alt="Message"
-                    className="w-1/3 h-1/3 pb-0 pt-16"
+                    className="w-2/3 sm:w-1/2 md:w-1/3 h-auto pb-0 pt-16"
                     initial={{ y: 500, rotate: 30, opacity: 0 }}
                     animate={isImage1Visible ? { y: 0, x: 0, rotate: 0, opacity: 1 } : { y: 500, x: 0, rotate: 30, opacity: 0 }}
                     transition={{ type: 'spring', stiffness: 58, damping: 7.72, mass: 1, duration: 1.554 }}
                 />
 
-                <div className="text-textColorPrimary2 py-24 leading-tight">
+                <div className="text-textColorPrimary2 py-24 leading-tight px-4">
                     <div className="flex brockmann5 text-textColorPrimary2">
                         <div style={{
                             background: '-webkit-linear-gradient(180deg, #FF7A00 0%, #FFE500 10%, #00E0FF 70%, #FF549C 87%)',
@@ -64,11 +64,11 @@ function AnimationMessage(props) {
                             {header2}
                         </div>
                     </div>
-                    <div className="sfui2 mt-12 text-textColorTertiary whitespace-pre-line">
+                    <div className="sm:sfui2 text-xl sm:text-3xl mt-12 text-textColorTertiary sm:whitespace-pre-line">
                         {subheader}
                     </div>
                 </div>
-                <img src={messageImage2} alt="Message" className="w-1/2 h-1/2 p-16" />
+                <img src={messageImage2} alt="Message" className="w-3/4 sm:w-2/3 md:w-1/2 h-auto md:p-16" />
             </div>
         </div>
     );
