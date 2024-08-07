@@ -46,7 +46,7 @@ const Navbar = () => {
                     </div>
 
                     <div
-                        className="hidden sm:block  py-4 hover:text-textColorPrimary relative group"
+                        className="hidden sm:block  py-4 hover:text-textColorPrimary relative group "
                         onMouseEnter={() => setIsHovered2(true)}
                         onMouseLeave={() => setIsHovered2(false)}
                     >
