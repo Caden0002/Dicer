@@ -21,9 +21,9 @@ const Navbar = () => {
         <div className="mt-6 fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
             <div className="mx-auto backdrop-blur-xl rounded-2xl pointer-events-auto" style={{ background: 'rgba(4, 4, 5, 0.6)', border: '1px solid rgba(255, 255, 255, 0.25)' }}>
                 <div className="inline-flex justify-center items-center sfuiNavbarLinks cursor-pointer text-textColorSecondary px-4 space-x-11">
-                    <img src={DicerLogo} alt="Dicer Logo" className="cursor-pointer" style={{ width: '18px', height: '18px' }} />
-                    
-                    <div
+    <Link to="/" className="cursor-pointer">
+        <img src={DicerLogo} alt="Dicer Logo" style={{ width: '18px', height: '18px' }} />
+    </Link>                    <div
                         className="py-4 hover:text-textColorPrimary relative group"
                         onMouseEnter={() => setIsHovered1(true)}
                         onMouseLeave={() => setIsHovered1(false)}
