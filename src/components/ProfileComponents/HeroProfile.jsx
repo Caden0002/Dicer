@@ -7,7 +7,7 @@ const HeroProfile = ({ username, twitterLink, walletAddress, handleCopy }) => {
   const formattedWalletAddress = `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}`;
 
   return (
-    <div className="col-start-5 col-span-4 flex flex-col justify-center items-start">
+    <div className="col-start-5 col-span-4 flex flex-col justify-center items-start mt-12 w-4/5 sm:w-full">
       <h2 className="sfui2 text-textColorPrimary">Profile Details</h2>
       <div className="mt-10 w-full">
         <div className="sfui4 text-textColorPrimary">Username</div>
@@ -29,7 +29,7 @@ const HeroProfile = ({ username, twitterLink, walletAddress, handleCopy }) => {
       </div>
       <div className="mt-12">
         <div className="sfui4 text-textColorPrimary">Wallet Address</div>
-        <div className="mt-2 flex font-sfui font-light text-4xl text-textColorTertiary items-center">
+        <div className="mt-2 flex font-sfui font-light text-4xl text-textColorTertiary items-center mb-12">
           {formattedWalletAddress}
           <img
             src={CopyButton}

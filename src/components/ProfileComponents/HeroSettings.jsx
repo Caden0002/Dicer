@@ -47,7 +47,7 @@ const HeroSettings = ({ languageOptions, currencyOptions }) => {
   }, []);
 
   return (
-    <div className="col-start-5 col-span-4 flex flex-col justify-center items-start">
+    <div className="col-start-5 col-span-4 flex flex-col justify-center items-start mt-12 w-4/5 sm:w-full">
       <h2 className="sfui2 text-textColorPrimary">Settings</h2>
 
       {/* Language Selection */}
@@ -101,7 +101,7 @@ const HeroSettings = ({ languageOptions, currencyOptions }) => {
           <div className="sfui4 text-textColorPrimary">Displayed Currency</div>
           <img src={CurrencyIcon} alt="Currency" className="w-4" />
         </div>
-        <div ref={currencyDropdownRef} className="relative mt-4 border border-textColorTertiary/[0.5] rounded-[14px] px-4 py-3 text-textColorPrimary2">
+        <div ref={currencyDropdownRef} className="relative mt-4 border border-textColorTertiary/[0.5] rounded-[14px] px-4 py-3 text-textColorPrimary2 mb-36">
           <button
             onClick={() => setIsCurrencyDropdownOpen(!isCurrencyDropdownOpen)}
             className="w-full bg-transparent border-none outline-none text-textColorPrimary2 text-left flex items-center justify-between"
